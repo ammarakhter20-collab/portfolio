@@ -20,7 +20,7 @@
 /* Card Styling - The "Cyber-Glass" Evolution */
 .card {
   position: relative;
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--card-bg);
   border: 1px solid var(--card-border);
   border-radius: 1.5rem;
   overflow: hidden;
@@ -30,6 +30,7 @@
   transform-style: preserve-3d;
   max-width: 350px;
   width: 100%;
+  box-shadow: var(--card-shadow, none);
 }
 
 .grid:has(.card:hover) .card {
@@ -44,9 +45,15 @@
   transform: translateZ(80px) scale(1.1) !important;
   z-index: 100;
   box-shadow: 
-    0 30px 60px rgba(0, 0, 0, 0.8),
+    0 30px 60px rgba(0, 0, 0, 0.2),
     0 0 40px var(--accent-glow);
   border-color: var(--accent);
+}
+
+[data-theme='dark'] .grid .card:hover {
+  box-shadow: 
+    0 30px 60px rgba(0, 0, 0, 0.8),
+    0 0 40px var(--accent-glow);
 }
 
 /* Mesh Backdrop - Theme Sync */
@@ -65,7 +72,7 @@
   z-index: 2;
   margin: 1.5rem;
   aspect-ratio: 16/10;
-  background: #000;
+  background: var(--foreground);
   border-radius: 0.8rem;
   border: 1px solid var(--accent);
   box-shadow: 0 0 20px var(--accent-glow);
@@ -110,10 +117,9 @@
   position: relative;
   z-index: 3;
   padding: 1.5rem;
-  /* Sync with Cyber Blue Theme */
-  background: rgba(14, 165, 233, 0.04); 
+  background: var(--card-bg); 
   backdrop-filter: blur(16px);
-  border-top: 1px solid rgba(14, 165, 233, 0.2);
+  border-top: 1px solid var(--card-border);
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -122,7 +128,7 @@
 .projectTitle {
   font-size: 1.2rem;
   font-weight: 800;
-  color: #fff;
+  color: var(--foreground);
   margin-bottom: 0.5rem;
   letter-spacing: 0.02em;
 }
@@ -162,7 +168,7 @@
 .viewProject {
   font-weight: 700;
   font-size: 0.95rem;
-  color: #fff;
+  color: var(--foreground);
   display: block;
 }
 
@@ -192,8 +198,8 @@
 .card:hover .projectArrow {
   transform: rotate(-15deg) scale(1.1);
   box-shadow: 0 0 20px var(--accent-glow);
-  background: #fff;
-  color: #000;
+  background: var(--foreground);
+  color: var(--background);
 }
 
 @media (max-width: 768px) {

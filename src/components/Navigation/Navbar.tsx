@@ -1,4 +1,5 @@
 import React from 'react';
+import ThemeToggle from './ThemeToggle';
 import styles from './Navbar.module.css';
 
 const Navbar = () => {
@@ -15,6 +16,7 @@ const Navbar = () => {
           <li><a href="#contact">Contact</a></li>
         </ul>
         <div className={styles.navAction}>
+          <ThemeToggle />
           <a href="#contact" className={styles.hireBtn}>Let's Build</a>
         </div>
       </div>

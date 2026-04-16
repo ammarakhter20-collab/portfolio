@@ -63,8 +63,8 @@
   align-items: center;
   gap: 1rem;
   padding: 1rem 2rem;
-  background: #fff;
-  color: #000;
+  background: var(--foreground);
+  color: var(--background);
   font-weight: 700;
   border-radius: 0.5rem;
   text-transform: uppercase;
@@ -95,7 +95,7 @@
 
 .secondaryBtn {
   font-weight: 600;
-  color: #fff;
+  color: var(--text-dim);
   border-bottom: 2px solid var(--accent);
   padding-bottom: 0.5rem;
 }

@@ -46,9 +46,15 @@
   transform: translateZ(80px) scale(1.1) !important;
   z-index: 100;
   box-shadow: 
-    0 30px 60px rgba(0, 0, 0, 0.6),
+    0 30px 60px rgba(0, 0, 0, 0.2),
     0 0 40px var(--accent-glow);
   border-color: var(--accent);
+}
+
+[data-theme='dark'] .grid .card:hover {
+  box-shadow: 
+    0 30px 60px rgba(0, 0, 0, 0.6),
+    0 0 40px var(--accent-glow);
 }
 
 .category {
@@ -79,7 +85,6 @@
 .card:hover .techItem {
   background: var(--accent);
   color: #fff;
-  border-color: #fff;
 }
 
 @media (max-width: 768px) {

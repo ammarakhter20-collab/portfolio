@@ -56,6 +56,11 @@
   box-shadow: 0 5px 25px var(--accent-glow);
 }
 
+.navAction {
+  display: flex;
+  align-items: center;
+}
+
 @media (max-width: 768px) {
   .navLinks {
     display: none;

@@ -51,7 +51,7 @@
 
 .detailItem p {
   font-size: 1rem;
-  color: #fff;
+  color: var(--foreground);
   font-weight: 500;
 }
 
@@ -77,11 +77,11 @@
 
 .inputGroup input,
 .inputGroup textarea {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--accent-muted);
   border: 1px solid var(--card-border);
   padding: 0.8rem 1rem;
   border-radius: 0.5rem;
-  color: #fff;
+  color: var(--foreground);
   font-family: inherit;
   transition: var(--transition-smooth);
 }
