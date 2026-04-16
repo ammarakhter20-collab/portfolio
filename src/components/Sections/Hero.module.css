@@ -1,0 +1,143 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding-top: 80px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content {
+  max-width: 700px;
+  z-index: 2;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  background: var(--accent-muted);
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  border-radius: 2rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.title {
+  font-size: clamp(3.5rem, 8vw, 6rem);
+  line-height: 1;
+  margin-bottom: 2rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: var(--text-dim);
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  max-width: 500px;
+}
+
+.actions {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+/* Creative CV Button */
+.cvWrapper {
+  position: relative;
+}
+
+.cvBtn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  background: #fff;
+  color: #000;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.9rem;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.cvBtn:hover {
+  background: var(--accent);
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.pulse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--accent);
+  border-radius: 0.5rem;
+  animation: pulse-glow 2s infinite;
+  pointer-events: none;
+}
+
+.secondaryBtn {
+  font-weight: 600;
+  color: #fff;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0.5rem;
+}
+
+.secondaryBtn:hover {
+  color: var(--accent);
+}
+
+.blob {
+  position: absolute;
+  right: -5%;
+  width: 500px;
+  height: 500px;
+  background: var(--accent);
+  filter: blur(100px);
+  opacity: 0.15;
+  border-radius: 50%;
+  z-index: 1;
+  animation: float 10s infinite alternate;
+}
+
+@keyframes float {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-20px, 40px); }
+}
+
+@media (max-width: 968px) {
+  .hero {
+    text-align: center;
+    justify-content: center;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .actions {
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .blob {
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
+}
