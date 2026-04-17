@@ -19,7 +19,7 @@ const Hero = () => {
           <div className={`${styles.actions} animate-in`}>
             {/* Main Creative CTA */}
             <div className={styles.cvWrapper}>
-              <a href="/cv.pdf" className={styles.cvBtn}>
+              <a href="/M_Ammar_Akhter_Resume.pdf" className={styles.cvBtn} download="M_Ammar_Akhter_Resume.pdf">
                 <span className={styles.btnText}>Download Resume</span>
                 <span className={styles.pulse}></span>
               </a>
