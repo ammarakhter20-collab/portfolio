@@ -31,7 +31,7 @@ const projectsData = [
       "/projects/nfs-2.png"
     ],
     tags: ["Next.js 16", "React 19", "Django", "DRF", "CSS Modules", "TypeScript"],
-    liveUrl: "#"
+    liveUrl: "https://need-for-speed-web.vercel.app/"
   },
 ];
 
